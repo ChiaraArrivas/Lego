@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Cera Pro;
+    src: url(../assets/fonts/Cera\ Pro\ Light.otf);
+}
+
+@font-face {
+    font-family: Cera Pro Bold;
+    src: url(../assets/fonts/Cera\ Pro\ Bold.otf);
+}
+
+html, * {
+    font-family: Cera Pro, sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    gap: 70px;
+}
+
+.typo {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: Cera Pro Bold;
+    font-size: 2rem;
+}
+
+.a-bold {
+    opacity: 0.6;
+}
+
+.a-light {
+    opacity: 0.6;
+}
+
+.icons {
+    margin-bottom: 20px;
+}
+
+
+
+
