@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+html, * {
+    font-family: 'cera pro', sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background-image: url(./assets/imgs/1804-REVEAL-Home-202211-Hero1-Standard-Large.webp);
+    background-position: top center;
+    background-size: 100vw auto;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 32vw;
+    max-width: 1600px;
+    margin: auto;
+}
+
+
+
+
+
+.sub-main-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.big-icons img, .big-icons span {
+    width: 5rem;
+}
+
+.big-icons span {
+    display: block;
+    text-align: center;
+    font-size: .8rem;
+    color: black;
+    transition: all 0.15s;
+}
+
+.big-icons:hover span {
+    text-decoration: underline;
+    color: #016db7;
+}
+
+.big-icons:hover img {
+    filter: opacity(0.8)
+}
+
+
+
+
+
