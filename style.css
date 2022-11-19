@@ -41,11 +41,61 @@ main {
     min-height: 32vw;
     max-width: 1600px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
+.white-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1.08rem;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all .15s;
+}
 
+.white-btn svg {
+    margin-left: 1rem;
+    padding-left: 0;
+}
 
+.white-btn:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
 
+.btn-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+    height: 5.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main h3 {
+    font-size: 1.13rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.8rem;
+}
 
 .sub-main-container {
     display: flex;
