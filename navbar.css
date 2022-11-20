@@ -35,6 +35,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .slideshow-container {
     margin: 0;
     padding: 0;
@@ -58,6 +59,10 @@ body {
     height: 18px;
 }
 
+.navbar {
+    flex-wrap: wrap;
+}
+
 .mySlides {
     display: flex;
     justify-content: flex-start;
@@ -69,6 +74,54 @@ body {
 
 .mySlides::-webkit-scrollbar {
     display: none;
+}
+
+.navbar .first-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    padding: 0 35px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.navbar .first-nav .first-nav-right {
+    display: flex;
+    align-items: center;  
+    gap: 0 20px;
+    font-size: 0.75rem;
+    font-weight: 500;  
+}
+
+.navbar .first-nav .first-nav-right img {
+    width: 18px;
+}
+
+.btn-area-giochi {
+    background-color: #abdaff;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    width: 120px;
+    transition: all .15S;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.btn-area-giochi img {
+    rotate: 180deg;
+    margin-right: 8px;
+}
+
+.btn-area-giochi:hover {
+    background-color: white;
+    box-shadow: 0 0 5px 3px #abdbff88;
+    cursor: pointer;
 }
 
 .yellow-nav {
