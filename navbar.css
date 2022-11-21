@@ -83,7 +83,9 @@ body {
     display: none;
 }
 
-.sub-menu {
+.sub-menu-acquista,
+.sub-menu-scopri,
+.sub-menu-aiuto {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
@@ -97,12 +99,16 @@ body {
     box-shadow: 0 0 500rem 500rem rgba(0, 0, 0, 0.295);
 }
 
-.sub-menu ul li:hover {
+.sub-menu-acquista ul li:hover,
+.sub-menu-scopri ul li:hover,
+.sub-menu-aiuto ul li:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
-.sub-menu ul {
+.sub-menu-acquista ul,
+.sub-menu-scopri ul,
+.sub-menu-aiuto ul {
     padding-left: 10vw;
     list-style-type: none;
     display: flex;
@@ -110,14 +116,18 @@ body {
     width: 250px;
 }
 
-.sub-menu ul li {
+.sub-menu-acquista ul li,
+.sub-menu-scopri ul li,
+.sub-menu-aiuto ul li {
     display: flex;
     justify-content: space-between;
     padding: 10.5px 0;
     font-weight: 400;
 }
 
-.sub-menu ul li img {
+.sub-menu-acquista ul li img,
+.sub-menu-scopri ul li img,
+.sub-menu-aiuto ul li img {
     width: 6px;
     padding-left: 2rem;
 }
