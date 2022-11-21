@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+* {
+    font-family: 'cera pro', sans-serif;
+    margin: 0;
+}
+
+.circle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 3rem;
+    border: 1px solid lightgray;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 0.9rem;
+    cursor: pointer;
+}
+
+.line1 {
+    width: 3px;
+    height: 20px;
+    background-color: black;
+    margin-left: 8px;
+    position: absolute;
+    top: 4.5px;
+    left: 5px;
+    transition: transform 0.4s;
+}
+
+.line2 {
+    height: 3px;
+    width: 20px;
+    background-color: black;
+    position: absolute;
+    left: 4.5px;
+    transition: transform 0.4s;
+}
+
+.line1-anim {
+    transform: rotate(-270deg);
+}
+
+.line2-anim {
+    transform: rotate(-180deg);
+}
+
+.buttons-hulk-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    height: 7.5rem;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 1.25rem;
+}
+
+.hulk-btn {
+    color: #016db6;
+    border: 1px solid #016db6;
+    background-color: white;
+    padding: .7rem 1.31rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hulk-btn:hover {
+    background-color: #e5f4ff;
+    transform: scale(1.02);
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #dbdbdb;
+    padding: 0 1.25rem;
+}
+
+.accordion-title h2 {
+    font-weight: 500;
+}
