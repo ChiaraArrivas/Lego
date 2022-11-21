@@ -107,3 +107,20 @@ html,
 .accordion-title h2 {
     font-weight: 500;
 }
+
+video {
+    margin-top: -.35rem;
+    padding: 0;
+    
+}
+
+.accordion {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.accordion0 {
+    max-height: 120vw;
+    transition: max-height 0.4s ease-in-out;
+}
