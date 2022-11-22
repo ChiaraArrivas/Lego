@@ -1,18 +1,27 @@
 const $other_menu = document.querySelectorAll(".other-menu");
 const $x_button = document.querySelectorAll(".x");
 const $search_btn = document.querySelector(".search-btn");
-const $mostra_cerca =  document.querySelector(".mostra-cerca");
+const $mostra_cerca = document.querySelector(".mostra-cerca");
 const $x_src = document.querySelector(".x-src");
 
-$search_btn.addEventListener("click", () => $mostra_cerca.classList.toggle("cerca"));
-$search_btn.addEventListener("click", () => $x_src.classList.toggle("cerca"));
+$search_btn.addEventListener("click", () => {
+    $mostra_cerca.classList.remove("cerca");
+    $x_src.classList.remove("cerca");
+});
+
+
+$x_src.addEventListener("click", () => {
+    $mostra_cerca.classList.add("cerca");
+    $x_src.classList.add("cerca");
+});
 
 $x_button.forEach((el) => {
-    el.addEventListener("click" ,() => {
-        $other_menu.forEach((el) => {el.classList.add("hidden");
-        $acquista.classList.remove("hover");
-        $scopri.classList.remove("hover");
-        $aiuto.classList.remove("hover");
+    el.addEventListener("click", () => {
+        $other_menu.forEach((el) => {
+            el.classList.add("hidden");
+            $acquista.classList.remove("hover");
+            $scopri.classList.remove("hover");
+            $aiuto.classList.remove("hover");
         });
     });
 });
