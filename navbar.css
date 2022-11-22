@@ -83,19 +83,25 @@ body {
     display: none;
 }
 
+.x {
+    width: 17px;
+    margin-top: 2rem;
+    align-self: flex-end;
+    margin-right: 3.125rem;
+}
+
 .sub-menu-acquista,
 .sub-menu-scopri,
 .sub-menu-aiuto {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    width: 48vw;
+    width: 755px;
     height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
     transition: width 0.3s;
-    padding-top: 15vh;
     box-shadow: 0 0 500rem 500rem rgba(0, 0, 0, 0.295);
 }
 
@@ -109,7 +115,8 @@ body {
 .sub-menu-acquista ul,
 .sub-menu-scopri ul,
 .sub-menu-aiuto ul {
-    padding-left: 10vw;
+    padding-top: 5rem;
+    padding-left: 153px;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -132,12 +139,6 @@ body {
     padding-left: 2rem;
 }
 
-.hidden {
-    width: 0;
-    overflow: hidden;
-    box-shadow: none;
-}
-
 .navbar .first-nav {
     display: flex;
     align-items: center;
@@ -146,6 +147,7 @@ body {
     padding: 0 35px;
     max-width: 1500px;
     margin: auto;
+    background-color: #f8f8f8;
 }
 
 .navbar .first-nav .first-nav-right {
@@ -309,4 +311,75 @@ body {
 .terzo:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+.icon-container span {
+    display: none;
+}
+
+.mostra-cerca {
+    height: 1.5rem;
+    border: none;
+    color: rgb(44, 44, 44);
+    padding: 0.625rem 0px 0.625rem 0.3125rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    width: 300px;
+}
+
+.x-src {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    border: none;  
+    background-color: white;
+    cursor: pointer;
+    padding-left: 0px 6px;
+}
+
+.cerca {
+    display:none;
+}
+
+
+
+@media (max-width: 1200px) {
+    .first-nav-right a span {
+        display: none;
+    }
+
+    .sub-menu-acquista,
+    .sub-menu-scopri,
+    .sub-menu-aiuto {
+        width: 755px;
+    }
+}
+
+.hidden {
+    width: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .icon-container {
+
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        height: 3px;
+    }
+
+    .icon-container span {
+        font-size: 0.45rem;
+        display: block;
+    }    
 }
