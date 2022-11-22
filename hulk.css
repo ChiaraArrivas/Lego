@@ -49,7 +49,7 @@ html,
     position: absolute;
     top: 4.5px;
     left: 5px;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
 }
 
 .line2 {
@@ -58,7 +58,7 @@ html,
     background-color: black;
     position: absolute;
     left: 4.5px;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
 }
 
 .line1-anim {
@@ -78,6 +78,247 @@ html,
     padding: 0 1.25rem;
 }
 
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #dbdbdb;
+    padding: 0 1.25rem;
+}
+
+.accordion-title h2 {
+    font-weight: 500;
+}
+
+.accordion {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    color: white;
+    background-color: #000000;
+}
+
+.accordion-open {
+    max-height: 4000px;
+    transition: max-height 0.5s ease-in;
+}
+
+
+video {
+    margin-top: -.35rem;  
+}
+
+.video-gallery-small {
+    display: none;
+}
+
+.accordion-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion-card-gallery {
+    padding: 1.75rem 1.25rem;
+}
+
+.accordion-card-gallery h2 {
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.accordion-card {
+    max-width: 26rem;
+    text-align: center;
+    padding-bottom: 1.75rem;
+}
+
+.accordion-card img {
+    width: 100%;
+}
+
+.accordion-card h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.accordion-card p {
+    font-size: 0.9rem;
+    
+}
+
+.other-video {
+    position: relative;
+}
+
+.other-video h2 {
+    position: absolute;
+    display: inline;
+    text-align: end;
+    right: 9vw;
+    top: 7.3vw;
+    line-height: 3.15rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.description-carousel {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow: scroll;
+    margin: -.5rem 0;
+    position: relative;
+}
+.description-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.desc-carousel-item {
+   min-width: 100vw;
+   position: relative;
+    height: fit-content;
+}
+
+.desc-carousel-item img {
+    width: 100%;
+}
+
+.white-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 1.3rem;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all .15s;
+    width: fit-content;
+}
+
+.white-btn svg {
+    margin-left: 1rem;
+    padding-left: 0;
+}
+
+.white-btn:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.desc-text-content {
+    display: none;
+}
+
+.desc-text-content h3 {
+    line-height: 3.15rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.desc-text-content p {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+
+}
+
+.first-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    left: 9vw;
+    top: 6vw;
+    width: 20rem;
+}
+
+.second-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    gap: 1rem;
+    right: 9vw;
+    top: 4vw;
+    width: 22rem;
+}
+
+.third-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    left: 9vw;
+    top: 5vw;
+    width: 22rem;
+}
+
+.desc-carousel-btn {
+    position: sticky;
+    height: fit-content;
+    background-color: #0000009a;
+    color: white;
+    border: none;
+    border-radius: 3rem;
+    display: flex;
+    align-self: center;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.desc-carousel-btn:hover {
+    background-color: white;
+    color: #000000;
+}
+
+.desc-prev-btn svg {
+    rotate: 180deg;
+}
+
+.desc-next-btn {
+    right: 1rem;
+    margin-left: -3.7rem;
+}
+
+.desc-prev-btn {
+    z-index: 1;
+    left: 1rem;
+    margin-right: -3.7rem;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    display: none;
+    overflow: visible;
+    z-index: 1;
+    max-height: 0;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2.5px;
+}
+
+
+
+
+
+
+
+
 .hulk-btn {
     color: #016db6;
     border: 1px solid #016db6;
@@ -94,33 +335,29 @@ html,
     transform: scale(1.02);
 }
 
-.accordion-title {
+@media (max-width:600px) {
+    .video-gallery-small {
+        display: block;
+    }
+    .video-gallery-large {
+        display: none;
+    }
+}
+
+.icon-container {
+    height: 30px;
+    width: 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 6rem;
-    background-color: #f9f9f9;
-    border-top: 1px solid #dbdbdb;
-    padding: 0 1.25rem;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1rem;
 }
 
-.accordion-title h2 {
-    font-weight: 500;
+.hamburger {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 3px;
 }
-
-video {
-    margin-top: -.35rem;
-    padding: 0;
-    
-}
-
-.accordion {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease-in-out;
-}
-
-.accordion0 {
-    max-height: 120vw;
-    transition: max-height 0.4s ease-in-out;
+span {
+    font-size: 0.45rem;
 }
