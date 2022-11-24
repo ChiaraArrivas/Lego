@@ -20,7 +20,7 @@ function Accordion(button, accordionBody, addPixels = 0) {
             if (accordionBody.scrollHeight > 800) {
             accordionBody.style.maxHeight = accordionBody.scrollHeight + addPixels + "px";
         } else {
-            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+            accordionBody.style.maxHeight = accordionBody.scrollHeight + 100 + "px";
         }
         } else {
             accordionBody.style.maxHeight = 0;
@@ -89,3 +89,26 @@ for (let i = 0; i < dots.length; i++) {
 
 ScrollControls($descriptionCarouselSmall, $dotsSmall, $carouselItemsSmall, "black");
 ScrollControls($descriptionCarousel, $dots, $carouselItems, "white");
+
+const scrollbar = document.querySelector(".scrollbar");
+const scrollbarThumb = document.querySelector(".thumb");
+const scrollDiv = document.querySelector(".accordion-card-container");
+
+
+function legoCustomHorizontalScrollbar(gallery, scrollThumb) {
+    scrollThumb.style.minWidth = (gallery.clientWidth / gallery.scrollWidth) * 100 + "%";
+
+window.addEventListener("resize", () => {
+    let width = gallery.scrollWidth;
+    let scrollbarStyle = scrollThumb.style;
+    let visiblePerc = (gallery.clientWidth / width) * 100;
+    scrollbarStyle.minWidth = visiblePerc + "%";
+    scrollbarStyle.marginLeft = (gallery.scrollLeft / width) * 100 + "%";
+})
+
+scrollDiv.addEventListener("scroll", () => {
+    scrollThumb.style.marginLeft = (gallery.scrollLeft / gallery.scrollWidth) * 100 + "%";
+})
+}
+
+legoCustomHorizontalScrollbar(scrollDiv, scrollbarThumb);

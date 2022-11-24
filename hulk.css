@@ -600,3 +600,18 @@ video {
        font-size: 0.875rem;
     }
 }
+
+.scrollbar {
+    width: 80vw;
+    height: 10px;
+    max-width: 1600px;
+    background-color: rgb(84, 84, 84);
+    margin: 1rem auto;
+    position: relative;
+}
+
+.thumb {
+    background-color: white;
+    position: absolute;
+    height: 10px;
+}
