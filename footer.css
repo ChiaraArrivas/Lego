@@ -1,0 +1,267 @@
+/* Regole prese dal design */
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, * {
+    font-family: 'cera pro', sans-serif;
+    margin: 0;
+}
+
+/**/
+
+footer {
+    background: rgb(32, 29, 72);
+    color: white; 
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+        "col1 col2 col3 col4 col5"
+        "social social social social social"
+        "policy policy policy policy policy"
+        "disclaimer disclaimer disclaimer disclaimer disclaimer";
+    gap: 1.25rem;
+    padding: 2.5rem 1rem;
+    max-width: 84rem;
+    margin: 0 auto;
+}
+
+.column-1 {
+    grid-area: col1;
+    padding-bottom: 1.25rem;
+}
+
+.column-2 {
+    grid-area: col2;
+}
+
+.column-3 {
+    grid-area: col3;
+}
+
+.column-4 {
+    grid-area: col4;
+}
+
+.column-5 {
+    grid-area: col5;
+}
+
+.social {
+    grid-area: social;
+    justify-self: flex-end;
+}
+
+.policy-links {
+    grid-area: policy;
+    display: flex;
+    flex-direction: row;
+}
+
+.disclaimer {
+    grid-area: disclaimer;
+    padding: 0rem 0.9375rem;
+}
+
+.policy-links a, .disclaimer p {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+footer h4 {
+    padding: 0 0.9375rem;
+    display: inline;
+}
+
+footer div.social h4 {
+    display: block;
+    margin-bottom: 1.5625rem;
+    font-weight: 500;
+}
+
+footer div.social a {
+    display: inline;
+}
+
+label + input + div {
+    margin-top: 1.5625rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.925rem 0.9375rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer img.lego-logo {
+    padding-bottom: 1rem;
+}
+
+footer button.position {
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    padding: 7px 0.75rem;
+    background-color: #18152c;
+    margin-bottom: 2rem;
+}
+
+footer a.catalogue, footer a.shop {
+    padding: 0.625rem 0rem;
+}
+
+footer label > svg.arrow, input[type=checkbox], div.content {
+    display: none;
+}
+
+footer svg.arrow {
+    line-height: 0;
+    width: 10px;
+    transform: rotate(90deg);
+}
+
+input[type=checkbox]:checked ~ div.content {
+    display: block;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "col1 col2 col3"
+            "col1 col4 col5"
+            "social social social"
+            "policy policy policy"
+            "disclaimer disclaimer disclaimer";
+        padding: 2.5rem;
+    }
+
+    .column-2, .column-3, .column-4, .column-5 {
+        max-width: 14.375rem;
+        margin-bottom: 5rem;
+        margin-right: 1.5625rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer-container {
+        display: revert;
+        padding: 0;
+    }
+
+    footer button.position {
+        padding: 0.75rem;
+    }
+
+    .column-2, .column-3, .column-4, .column-5 {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .column-1 {
+        padding: 1.25rem;
+    }
+
+    .social {
+        padding-top: 2.5rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .policy-links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .policy-links, .disclaimer {
+        padding-bottom: 2.5rem;
+    }
+
+    footer label {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 0.9375rem 1.25rem;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    footer label > h4 {
+        height: 1.5rem;
+        padding: 0;
+        margin-top: 0.2rem;
+    }
+
+    footer label > img {
+        display: initial;
+    }
+
+    footer label ~ div > a {
+        border-bottom: 1px solid white;
+        padding: 1.1rem;
+    }
+
+    label + input + div {
+        margin-top: 0;
+        font-size: 0.85rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer img.lego-logo {
+        width: 4.375rem;
+        height: 4.375rem;
+    }
+
+    footer button.position {
+        font-size: 1.125rem;
+        padding: 0.625rem 0.9375rem 0.625rem 0.625rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .lego-logo-and-position {
+        display: flex;
+        gap: 0.8rem;
+        padding-top: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .social-links {
+        display: flex;
+    }
+}
