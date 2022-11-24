@@ -17,8 +17,11 @@ function Accordion(button, accordionBody, addPixels = 0) {
     accordionBody.style.maxHeight = "0px";
     button.addEventListener("click", () => {
         if (accordionBody.style.maxHeight == "0px") {
+            if (accordionBody.scrollHeight > 800) {
             accordionBody.style.maxHeight = accordionBody.scrollHeight + addPixels + "px";
-
+        } else {
+            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+        }
         } else {
             accordionBody.style.maxHeight = 0;
         }
@@ -27,7 +30,7 @@ function Accordion(button, accordionBody, addPixels = 0) {
 }
 
 for (let i = 0; i < $accordionBtn.length; i++) {
-    Accordion($accordionBtn[i], $accordion[i], 2200);
+    Accordion($accordionBtn[i], $accordion[i], 2550);
     $accordionBtn[i].addEventListener("click", () => {
         $verticalLine[i].classList.toggle("line1-anim");
         $horizontalLine[i].classList.toggle("line2-anim");

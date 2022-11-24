@@ -560,17 +560,6 @@ video {
     .desc-controls-small {
         display: flex;
     }
-    
-    .desc-carousel-item-small:nth-of-type(2) {
-       
-    }
-    
-    .desc-carousel-item-small:nth-of-type(3) {
-       
-    }
-    .desc-carousel-item-small {
-        
-    }
     .accordion-card-gallery h2 {
         font-size: 1.25rem;
     }
@@ -606,5 +595,8 @@ video {
     }
     .accordion-card p {
         font-size: 0.9rem;
+    }
+    .details-left {
+       font-size: 0.875rem;
     }
 }
