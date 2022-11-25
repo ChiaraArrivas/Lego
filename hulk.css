@@ -105,7 +105,7 @@ html,
 }
 
 video {
-    margin-top: -.35rem;  
+    margin-top: -.35rem;
 }
 
 .video-gallery-small {
@@ -123,6 +123,12 @@ video {
     padding: 1.75rem 1.25rem;
     max-width: 1280px;
     margin: auto;
+}
+
+.accordion-card-gallery::-webkit-scrollbar,
+.accordion-card-gallery::-webkit-scrollbar-thumb,
+.accordion-card-gallery::-webkit-scrollbar-track {
+    display: none;
 }
 
 .accordion-card-gallery h2 {
@@ -149,7 +155,7 @@ video {
 
 .accordion-card p {
     font-size: 0.875rem;
-    
+
 }
 
 .other-video {
@@ -187,13 +193,15 @@ video {
     position: relative;
     max-height: 507px;
 }
-.description-carousel::-webkit-scrollbar {
+
+.accordion-card-container::-webkit-scrollbar {
     display: none;
 }
 
 .desc-carousel-item {
-   min-width: 100%;
-   min-height: 32vw;
+    min-width: 100%;
+    height: 32vw;
+    max-height: 507px;
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -329,6 +337,7 @@ video {
 .desc-carousel-item-small img {
     width: 100%;
 }
+
 .desc-text-content-small {
     display: flex;
     flex-direction: column;
@@ -336,6 +345,7 @@ video {
     text-align: center;
     padding: 1rem;
 }
+
 .desc-text-content-small h3 {
     text-align: center;
     padding-bottom: 1rem;
@@ -346,6 +356,7 @@ video {
 .desc-text-content-small p {
     font-size: 0.875rem;
 }
+
 .desc-text-content-small button {
     margin: 1rem auto;
 }
@@ -382,10 +393,11 @@ video {
     overflow: visible;
     margin-bottom: -1.15rem;
     z-index: 1;
-   max-height: 1rem;
+    max-height: 1rem;
 }
 
-.dot, .dot-small {
+.dot,
+.dot-small {
     height: 10px;
     width: 10px;
     background-color: #bbb;
@@ -412,11 +424,12 @@ video {
     justify-content: center;
 }
 
-.details-right img{
+.details-right img {
     max-width: 100%;
 }
 
-.details-left p, .details-left li {
+.details-left p,
+.details-left li {
     padding-bottom: 1.25rem;
 }
 
@@ -472,79 +485,95 @@ video {
     .accordion-title h2 {
         font-size: 1.125rem;
     }
+
     .accordion-card-gallery h2 {
         font-size: 1.5rem;
     }
+
     .accordion-card-container::-webkit-scrollbar {
         width: 0;
         height: 5px;
         transition: all 0.2s;
-      }
+        display: block;
+    }
 
-      .accordion-card-container::-webkit-scrollbar-track {
+    .accordion-card-container::-webkit-scrollbar-track {
         box-shadow: inset 0 0 20px #272727;
         border-radius: 0;
-      }
-      .accordion-card-container::-webkit-scrollbar-thumb {
+    }
+
+    .accordion-card-container::-webkit-scrollbar-thumb {
         background: #9d9d9d;
         border-radius: 0;
         cursor: pointer;
-      }
-      .accordion-card-container::-webkit-scrollbar-thumb:hover,
-      .accordion-card-container::-webkit-scrollbar-thumb:active {
+    }
+
+    .accordion-card-container::-webkit-scrollbar-thumb:hover,
+    .accordion-card-container::-webkit-scrollbar-thumb:active {
         background-color: white;
         cursor: pointer;
-      }
+    }
+
     .other-video h2 {
         font-size: 1.2rem;
         line-height: 2rem;
         max-width: 40vw;
     }
+
     .other-video h2 br:first-of-type {
         display: none;
     }
+
     .desc-carousel-item:first-of-type {
         background-image: url(./assets/imgs/Hulkbuster/76210-202211-PDP-Hero-Carousel-Medium-2.webp);
     }
-    
+
     .desc-carousel-item:nth-of-type(2) {
         background-image: url(./assets/imgs/Hulkbuster/76210-202211-PDP-Hero-Carousel-Medium-3.webp);
     }
-    
+
     .desc-carousel-item:nth-of-type(3) {
         background-image: url(./assets/imgs/Hulkbuster/76210-202211-PDP-Hero-Carousel-Medium-4.webp);
     }
+
     .desc-carousel-item {
         min-height: 39.8vw;
     }
+
     .dots {
         top: 34.8vw;
     }
+
     .desc-text-content {
         width: 40%;
     }
+
     .desc-text-content h3 {
         font-size: 1.2rem;
         line-height: 1rem;
     }
+
     .desc-text-content p {
         font-size: 0.9rem;
     }
+
     .container {
         flex-direction: column-reverse;
     }
+
     .details-left {
         padding: 1rem 1.25rem;
         box-sizing: border-box;
         width: 100%;
     }
-    
+
     .details-right {
         padding: 1rem 1.25rem;
         width: 100%;
         box-sizing: border-box;
         align-items: center;
     }
+
     .review {
         justify-content: center;
         flex-direction: column;
@@ -555,30 +584,39 @@ video {
     .description-carousel {
         display: none;
     }
+
     .dots {
         display: none;
     }
+
     .description-carousel-small {
         display: flex;
     }
+
     .desc-controls-small {
         display: flex;
     }
+
     .accordion-card-gallery h2 {
         font-size: 1.25rem;
     }
+
     .accordion-card h3 {
         font-size: 1.125rem;
     }
+
     .other-video {
         display: none;
     }
+
     .other-video-small {
         display: block;
     }
+
     .video-gallery-small {
         display: block;
     }
+
     .video-gallery-large {
         display: none;
     }
@@ -594,14 +632,17 @@ video {
     .accordion-card {
         min-width: 13rem;
     }
+
     .accordion-card h3 {
         font-size: 1rem;
     }
+
     .accordion-card p {
         font-size: 0.9rem;
     }
+
     .details-left {
-       font-size: 0.875rem;
+        font-size: 0.875rem;
     }
 }
 
