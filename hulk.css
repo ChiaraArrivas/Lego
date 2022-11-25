@@ -28,6 +28,219 @@ html,
     margin: 0;
 }
 
+.product-detail-links-wrapper{
+    max-width: 100rem;
+    margin: 0px auto;
+    padding: 1.125rem;
+    border-bottom: 1px solid rgb(215, 204, 204);
+}
+
+.product-detail-links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+.product-detail-links a{
+    color: #006db7;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.product-detail-links a:hover{
+    text-decoration: underline;
+}
+
+
+
+.product-detail-links span{
+    font-size: 0.875rem;
+    color: rgb(43, 42, 42);
+}
+
+.product-detail-page-carousel{
+    padding: 1.5rem 0px;
+}
+
+.product-detail-page-wrapper{
+    max-width: 102.2rem;
+    margin: 0 auto;
+}
+
+.product-detail-page-carousel-img-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px ;
+}
+
+.product-detail-page-carousel-img-container img{
+    
+    width: 65px;
+    height: 45px;
+}
+
+.btn-arrow{
+    width: 69px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(34, 34, 34);
+    opacity: 0.75;
+    border: none;
+    padding: 0.3125rem;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.btn-arrow-up{
+    padding-bottom: 20px;
+}
+
+.btn-arrow-down{
+    padding-top: 20px;
+}
+
+.btn-arrow-up svg{
+    rotate: -90deg;
+    
+}
+
+.btn-arrow-down svg{
+    rotate: 90deg;
+    
+}
+
+.product-detail-page-gallery{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.product-detail-top span{
+    background-color: rgb(255, 207, 0);
+    padding: 0.25rem 0.625rem;
+    font-size: 0.875rem;
+}
+
+.product-detail-page-image-wrapper{
+    padding: 1.25rem;
+    width: 37vw;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid rgb(215, 204, 204)
+}
+
+.product-detail-page-cart-wrapper{
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    width: 42vh;
+    
+}
+
+.product-detail-page-cart{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-detail-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-detail-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0px;
+}
+
+.product-detail-name h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.product-detail-price span{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-detail-price p{
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgb(2, 165, 70);
+}
+
+.product-detail-price{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quantity-conteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    
+}
+
+.number-quantity-conteiner{
+    width: 69px;
+    height: 43px;
+    border-top: 1px solid rgb(206, 202, 202);
+    border-bottom: 1px solid rgb(206, 202, 202);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-svg{
+    border: 1px solid rgb(206, 202, 202) ;
+    width: 45px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minus-svg-container{
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    cursor: pointer;
+}
+
+.plus-svg-container{
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    cursor: pointer;
+}
+
+.product-add-cart{
+    display: flex;
+    flex-direction: row;
+}
+
+#btn-add-cart{
+    background-color: #fd8123;
+    padding: 1.08rem 0.93rem;
+    border: 2px solid #fd8123;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.15s;
+    width: 14.5vw;
+    cursor: pointer;
+}
+
+
+/* fine parte marco.i */
+
 .circle {
     display: flex;
     justify-content: flex-end;
