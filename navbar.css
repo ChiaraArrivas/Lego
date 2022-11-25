@@ -46,7 +46,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: zz;
     align-items: center;
     height: 55px;
     width: 34.5rem;
@@ -363,6 +363,7 @@ body {
 
 
 @media (min-width: 1600px) {
+
     .sub-menu-acquista ul,
     .sub-menu-scopri ul,
     .sub-menu-aiuto ul {
@@ -397,6 +398,21 @@ body {
 
 @media (max-width: 900px) {
 
+    .mySlides {
+            flex-wrap: wrap;
+            line-height: 1.5;
+    }
+
+    .navbar .first-nav {
+        padding-left: 5px;
+        padding-right: 17px;
+    }
+
+    .slideshow-container {
+        margin: 5%;
+        padding: 0;
+    }
+
     .icon-container {
         height: 20px;
         width: 20px;
@@ -405,7 +421,7 @@ body {
         justify-content: space-between;
     }
 
-    .yellow-nav {        
+    .yellow-nav {
         background-color: white;
         border-bottom: 1px solid #ffcf03;
     }
@@ -429,7 +445,7 @@ body {
         margin-top: 5px;
     }
 
-    .head2{
+    .head2 {
         display: block;
     }
 
@@ -437,8 +453,8 @@ body {
         display: block;
     }
 
-    .navbar .nav-left .links, 
-    .navbar .first-nav .first-nav-left, 
+    .navbar .nav-left .links,
+    .navbar .first-nav .first-nav-left,
     .navbar .first-nav .first-nav-right {
         display: none;
     }
