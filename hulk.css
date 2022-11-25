@@ -193,7 +193,7 @@ video {
 
 .desc-carousel-item {
    min-width: 100%;
-   min-height: 31.25vw;
+   min-height: 32vw;
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -374,14 +374,15 @@ video {
 
 .dots {
     display: flex;
+    align-items: flex-end;
     justify-content: center;
     position: sticky;
-    top: 27vw;
+    bottom: 1.5rem;
     right: calc(50% - 22.5px);
     overflow: visible;
-    margin-left: -4rem;
+    margin-bottom: -1.15rem;
     z-index: 1;
-    height: fit-content;
+   max-height: 1rem;
 }
 
 .dot, .dot-small {
@@ -552,6 +553,9 @@ video {
 
 @media (max-width:600px) {
     .description-carousel {
+        display: none;
+    }
+    .dots {
         display: none;
     }
     .description-carousel-small {
