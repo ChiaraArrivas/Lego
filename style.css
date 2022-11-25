@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Cera Pro';
+    src: url('https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html, * {
+    font-family: 'cera pro', sans-serif;
+    margin: 0;}
+
+
+
+
+.cards {
+    margin-bottom: 30px;
+    display: flex;
+    padding: 25px 0px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    width: 100%;
+}
+
+.post-top-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    /* max-width: 300px;             */
+    padding-bottom: 70px;
+    
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20% ; 
+    min-width: 12%;
+    flex-direction: column;
+    flex: 0 0 20%;
+    scroll-snap-align: start;
+    transition: all 0.2s;
+    
+    
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+}
+
+.heart-follow-icon {
+    width: 18px;
+    height: 18px;
+
+}
+
+.wishList-reccomendations {
+    margin-top: 7px;
+    font-size: 11px;
+    margin-left: 5px;
+    display: block;
+}
+
+.product-carousel-productwrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  
+    justify-content: flex-start;
+
+}
+
+.Picture-carousel-container {
+    display: flex;
+   
+
+}
+
+.Wishlist {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.heart-follow-icon {
+    border: 2px solid #fbfbfb  ;
+    padding: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    border-radius: 50%;
+    background-color: #fbfbfb;   
+    justify-items: center;
+}
+
+.Image-carousel1 {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    margin: auto;
+    align-items: center;
+
+   
+}
+
+.button-carousel {
+
+background-color: #fd8123;
+padding: 1.08rem 0.93rem;
+border: 2px solid #fd8123;
+border-radius: 4px;
+font-size: 1rem;
+font-weight: 500;
+transition: all 0.15s;
+height: 100%;
+width: 100%;
+}
+
+.text-carousel-link  {
+    text-decoration: none;
+    color: black;
+}
+
+.rating-bar-style {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+span {
+  font-size: 15px;
+  
+}
+
+.cards::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: grey;
+  }
+
+
+  .products-reccomendations-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
