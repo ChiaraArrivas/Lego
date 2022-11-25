@@ -9,17 +9,30 @@ const $scopri = document.querySelector(".secondo");
 const $sub_menu_scopri = document.querySelector(".sub-menu-scopri");
 const $aiuto = document.querySelector(".terzo");
 const $sub_menu_aiuto = document.querySelector(".sub-menu-aiuto");
+const $src_x_input = document.querySelector(".src-x-input");
+const $first_nav = document.querySelector(".first-nav");
+const $x900px = document.querySelector(".x900px");
+
+$x900px.addEventListener("click", () => $first_nav.style.display = "none");
 
 //EVENTO TASTO CERCA
 $search_btn.addEventListener("click", () => {
     $mostra_cerca.classList.remove("cerca");
     $x_src.classList.remove("cerca");
+    $search_btn.style.borderBottomRightRadius = "0";
+    $search_btn.style.borderTopRightRadius = "0";
+    $search_btn.style.boxShadow = "0 0 500rem 500rem rgba(0, 0, 0, 0.295)";
+    $src_x_input.style.zIndex = "2";
 });
 
 //EVENTO TASTO X IN CERCA
 $x_src.addEventListener("click", () => {
     $mostra_cerca.classList.add("cerca");
     $x_src.classList.add("cerca");
+    $search_btn.style.borderBottomRightRadius = " 3rem";
+    $search_btn.style.borderTopRightRadius = " 3rem";
+    $search_btn.style.boxShadow = null;
+    $src_x_input.style.zIndex = null;
 });
 
 //EVENTO TASTO X NEI LINK
@@ -44,7 +57,7 @@ $acquista.addEventListener("click", () => {
         }
     });
     $sub_menu_acquista.classList.toggle("hidden");
-    $acquista.classList.toggle("hover")
+    $acquista.classList.toggle("hover");
 }
 );
 
@@ -102,6 +115,9 @@ document.addEventListener('mouseup', function (e) {
     if(!$x_src.contains(e.target)) {
         $mostra_cerca.classList.add("cerca");
         $x_src.classList.add("cerca");
+        $search_btn.style.borderBottomRightRadius = "3rem";
+        $search_btn.style.borderTopRightRadius = "3rem";
+        $search_btn.style.boxShadow = null;
     }
 });
 
