@@ -1,4 +1,4 @@
-const $other_menu = document.querySelectorAll(".other-menu");
+const $other_menu = document.querySelector(".other-menu");
 const $x_button = document.querySelectorAll(".x");
 const $search_btn = document.querySelector(".search-btn");
 const $mostra_cerca = document.querySelector(".mostra-cerca");
@@ -38,24 +38,15 @@ $x_src.addEventListener("click", () => {
 //EVENTO TASTO X NEI LINK
 $x_button.forEach((el) => {
     el.addEventListener("click", () => {
-        $other_menu.forEach((el) => {
-            el.classList.add("hidden");
-            $acquista.classList.remove("hover");
-            $scopri.classList.remove("hover");
-            $aiuto.classList.remove("hover");
+        $other_menu.classList.add("hidden");
         });
     });
-});
 
 //EVENTO TASTO ACQUISTA
 $acquista.addEventListener("click", () => {
-    $other_menu.forEach((el) => {
-        if (el != $sub_menu_acquista) {
-            el.classList.add("hidden");
-            $scopri.classList.remove("hover");
-            $aiuto.classList.remove("hover");
-        }
-    });
+    if ($other_menu.classList.contains("hidden")){
+        $other_menu.classList.toggle("hidden")
+    }
     $sub_menu_acquista.classList.toggle("hidden");
     $acquista.classList.toggle("hover");
 }
@@ -63,13 +54,9 @@ $acquista.addEventListener("click", () => {
 
 //EVENTO TASTO SCOPRI
 $scopri.addEventListener("click", () => {
-    $other_menu.forEach((el) => {
-        if (el != $sub_menu_scopri) {
-            el.classList.add("hidden");
-            $acquista.classList.remove("hover");
-            $aiuto.classList.remove("hover");
-        }
-    });
+    if ($other_menu.classList.contains("hidden")){
+        $other_menu.classList.toggle("hidden")
+    }
     $sub_menu_scopri.classList.toggle("hidden");
     $scopri.classList.toggle("hover");
 }
@@ -77,15 +64,11 @@ $scopri.addEventListener("click", () => {
 
 //EVENTO TASTO AIUTO
 $aiuto.addEventListener("click", () => {
-    $other_menu.forEach((el) => {
-        if (el != $sub_menu_aiuto) {
-            el.classList.add("hidden");
-            $acquista.classList.remove("hover");
-            $scopri.classList.remove("hover");
-        }
-    });
+    if ($other_menu.classList.contains("hidden")){
+    $other_menu.classList.toggle("hidden")
+}
     $sub_menu_aiuto.classList.toggle("hidden");
-    $aiuto.classList.toggle("hover")
+    $aiuto.classList.toggle("hover");
 }
 );
 
