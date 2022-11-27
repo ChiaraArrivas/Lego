@@ -100,30 +100,62 @@ body {
 
 .other-menu {
     display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
-    min-width: 950px;
+    min-width: 745px;
     height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
-    transition: width 0.3s;
+/*     transition: min-width 0.3s; */
     box-shadow: 0 0 500rem 500rem rgba(0, 0, 0, 0.295);
+}
+
+.sub-menu-container {
+    display: flex;
+    padding-top: 4.75rem;
+    padding-left: 8.3rem;
+}
+
+.sub-menu-acquista,
+.sub-menu-scopri,
+.sub-menu-aiuto {
+    max-height: 75vh;
+    overflow: scroll;
 }
 
 .sub-menu-acquista  ul,
 .sub-menu-scopri  ul,
-.sub-menu-aiuto  ul,
-.set-per-tema {
-    padding-top: 7.5rem;
-    padding-left: 6.6rem;
+.sub-menu-aiuto  ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     width: 250px;
+    margin-right: 2.25rem;
 }
 
-.set-per-tema {
-    padding-left: 11rem;
+.sub-sub-menu {
+    margin-top: .7rem;
+    padding-right: 80px;
+    border-left: 1px solid lightgrey;
+    max-height: 75vh;
+    overflow: scroll;
+}
+.sub-sub-menu h4 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin-bottom: 1.375rem;
+    margin-left: 40px;
+}
+.sub-sub-menu ul {
+    padding-left: 40px;
+}
+
+.sub-sub-menu li {
+    list-style-type: none;
+    padding-bottom: 1.25rem;
+    font-size: 0.9rem;
+    font-size: 0.875rem;
 }
 
 .none {
@@ -134,7 +166,7 @@ body {
 .sub-menu-aiuto  li {
     display: flex;
     justify-content: space-between;
-    padding: 10.5px 0;
+    padding: 9.7px 0;
     font-weight: 400;
 }
 
@@ -371,11 +403,11 @@ li:hover {
 
 
 @media (min-width: 1600px) {
-
-    .sub-menu-acquista ul,
-.sub-menu-scopri ul,
-.sub-menu-aiuto ul {
-        padding-left: calc(50vw - 42.4rem);
+    .sub-menu-container {
+        padding-left: calc(50vw - 41rem);
+    }
+    .other-menu {
+        min-width: 50vw;
     }
 }
 
@@ -383,9 +415,8 @@ li:hover {
     .first-nav-right a span {
         display: none;
     }
-
-    .other-menu {
-        width: 755px;
+    .flex {
+        flex-direction: column;
     }
 }
 
@@ -517,4 +548,16 @@ li:hover {
     .f-s-vip {
         display: none;
     }
+}
+
+.btn-area-giochi2 {
+
+}
+
+#right {
+    rotate: none;
+}
+
+li img {
+    margin-right: 1.25rem;
 }
