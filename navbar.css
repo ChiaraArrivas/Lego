@@ -43,6 +43,13 @@ body {
     overflow-x: hidden;
 }
 
+.yellow-btn {
+    padding: 4.5px 9.5px;
+    background-color: #ffcf03;
+    border: none;
+    font-size: 0.75rem;
+}
+
 .slideshow-container {
     margin: 0;
     padding: 0;
@@ -93,9 +100,8 @@ body {
 
 .other-menu {
     display: flex;
-    flex-direction: column;
     background-color: rgb(255, 255, 255);
-    width: 950px;
+    min-width: 950px;
     height: 100vh;
     position: absolute;
     left: 0;
@@ -104,28 +110,37 @@ body {
     box-shadow: 0 0 500rem 500rem rgba(0, 0, 0, 0.295);
 }
 
-.other-menu:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
-
-.other-menu ul {
-    padding-top: 5rem;
-    padding-left: 170px;
+.sub-menu-acquista  ul,
+.sub-menu-scopri  ul,
+.sub-menu-aiuto  ul,
+.set-per-tema {
+    padding-top: 7.5rem;
+    padding-left: 6.6rem;
     list-style-type: none;
     display: flex;
     flex-direction: column;
     width: 250px;
 }
 
-.other-menu li {
+.set-per-tema {
+    padding-left: 11rem;
+}
+
+.none {
+    display: none;
+}
+.sub-menu-acquista  li,
+.sub-menu-scopri  li,
+.sub-menu-aiuto  li {
     display: flex;
     justify-content: space-between;
     padding: 10.5px 0;
     font-weight: 400;
 }
 
-.other-menu ul li img {
+.sub-menu-acquista  ul li img,
+.sub-menu-scopri  ul li img,
+.sub-menu-aiuto   ul li img {
     width: 6px;
     padding-left: 2rem;
 }
@@ -199,6 +214,10 @@ body {
     cursor: pointer;
 }
 
+
+.flex {
+    display: flex;
+}
 .yellow-nav {
     background-color: #ffcf03;
 }
@@ -303,9 +322,7 @@ body {
     background-color: #016db6;
 }
 
-.primo:hover,
-.secondo:hover,
-.terzo:hover {
+li:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
 }
@@ -355,17 +372,14 @@ body {
 
 @media (min-width: 1600px) {
 
-    .other-menu ul {
-        padding-left: calc(50vw - 38.5rem);
+    .sub-menu-acquista ul,
+.sub-menu-scopri ul,
+.sub-menu-aiuto ul {
+        padding-left: calc(50vw - 42.4rem);
     }
 }
 
 @media (max-width: 1200px) {
-
-    .other-menu ul {
-        padding-left: 170px;
-    }
-
     .first-nav-right a span {
         display: none;
     }

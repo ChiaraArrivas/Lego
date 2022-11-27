@@ -1,5 +1,5 @@
 const $other_menu = document.querySelector(".other-menu");
-const $x_button = document.querySelectorAll(".x");
+const $x_button = document.querySelector(".x");
 const $search_btn = document.querySelector(".search-btn");
 const $mostra_cerca = document.querySelector(".mostra-cerca");
 const $x_src = document.querySelector(".x-src");
@@ -36,64 +36,44 @@ $x_src.addEventListener("click", () => {
 });
 
 //EVENTO TASTO X NEI LINK
-$x_button.forEach((el) => {
-    el.addEventListener("click", () => {
+$x_button.addEventListener("click", () => {
         $other_menu.classList.add("hidden");
         });
-    });
 
-//EVENTO TASTO ACQUISTA
-$acquista.addEventListener("click", () => {
-    if ($other_menu.classList.contains("hidden")){
-        $other_menu.classList.toggle("hidden")
+//EVENTI TASTI ACQUISTA SCOPRI E AIUTO
+function menu(button, menuContainer, menu) {
+    button.addEventListener("click", () => {
+        if (menuContainer.classList.contains("hidden")){
+            menuContainer.classList.toggle("hidden");
+        } 
+        menu.classList.toggle("hidden");
+        button.classList.toggle("hover");
     }
-    $sub_menu_acquista.classList.toggle("hidden");
-    $acquista.classList.toggle("hover");
+    );
 }
-);
+menu($acquista, $other_menu, $sub_menu_acquista);
 
-//EVENTO TASTO SCOPRI
-$scopri.addEventListener("click", () => {
-    if ($other_menu.classList.contains("hidden")){
-        $other_menu.classList.toggle("hidden")
-    }
-    $sub_menu_scopri.classList.toggle("hidden");
-    $scopri.classList.toggle("hover");
-}
-);
+menu($scopri, $other_menu, $sub_menu_scopri);
 
-//EVENTO TASTO AIUTO
-$aiuto.addEventListener("click", () => {
-    if ($other_menu.classList.contains("hidden")){
-    $other_menu.classList.toggle("hidden")
-}
-    $sub_menu_aiuto.classList.toggle("hidden");
-    $aiuto.classList.toggle("hover");
-}
-);
+menu($aiuto, $other_menu, $sub_menu_aiuto);
 
 //EVENTI FUORI DAL DIV
+
 document.addEventListener('mouseup', function (e) {
-    if (!$sub_menu_acquista.classList.contains("hidden")) {
-        if (!$sub_menu_acquista.contains(e.target)) {
-            $sub_menu_acquista.classList.toggle("hidden");
-            $acquista.classList.remove("hover");
+    function closeMenu(menu, menuContainer, button) {
+        if (!menu.classList.contains("hidden")) {
+            if (!menu.contains(e.target)) {
+                menu.classList.toggle("hidden");
+                button.classList.remove("hover");
+                menuContainer.classList.toggle("hidden");
+            }
         }
     }
+    closeMenu($sub_menu_acquista, $other_menu, $acquista);
 
-    if (!$sub_menu_scopri.classList.contains("hidden")) {
-        if (!$sub_menu_scopri.contains(e.target)) {
-            $sub_menu_scopri.classList.toggle("hidden");
-            $scopri.classList.remove("hover");
-        }
-    }
+    closeMenu($sub_menu_scopri, $other_menu, $scopri);
 
-    if (!$sub_menu_aiuto.classList.contains("hidden")) {
-        if (!$sub_menu_aiuto.contains(e.target)) {
-            $sub_menu_aiuto.classList.toggle("hidden");
-            $aiuto.classList.remove("hover");
-        }
-    }
+    closeMenu($sub_menu_aiuto, $other_menu, $aiuto);
 
     if(!$x_src.contains(e.target)) {
         $mostra_cerca.classList.add("cerca");
@@ -104,4 +84,14 @@ document.addEventListener('mouseup', function (e) {
     }
 });
 
+window.addEventListener("resize", () => {
+    if (document.body.clientWidth < 900) {
+        $sub_menu_aiuto.classList.add("hidden");
+        $other_menu.classList.add("hidden");
+        $scopri.classList.add("hover");
+        $aiuto.classList.remove("hover");
+        $scopri.classList.remove("hover");
+        $acquista.classList.remove("hover");
+    }
+})
 

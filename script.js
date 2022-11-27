@@ -28,4 +28,3 @@ previousButton.addEventListener("click", () => {
     
 }
 carousel(prevBtn, nextBtn, scrollableNav);
-carousel(pre, next, scrollDivTest);
