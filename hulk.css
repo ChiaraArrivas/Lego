@@ -34,6 +34,12 @@ html,
     padding: 0px 2rem !important;
 }
 
+.product-detail-page-container{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(224, 224, 224)
+}
+
 .product-detail-links{
     padding: 1.25rem 0px !important;;
     display: flex;
@@ -57,12 +63,12 @@ html,
 
 .product-detail-page-carousel{
     padding: 1.25rem 0px !important;
-    height: 825px;
+    
 }
 
 
 .product-detail-page-image{
-    height: 825px !important;
+    
     border-right: 1px solid rgb(224, 224, 224) !important;
     margin: 0 auto !important;
     padding: 1.25rem 10rem !important;
@@ -70,7 +76,7 @@ html,
 
 .product-detail-page-cart{
     padding: 1.25rem !important;
-    height: 825px;
+    
 }
 
 .product-detail-page{
@@ -79,9 +85,19 @@ html,
 }
 
 .product-detail-page-carousel-img-container img{
-    
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 45px;
+}
+
+.carousel-img-container{
     width: 65px;
     height: 45px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(224, 224, 224);
+    cursor: pointer;
 }
 
 .btn-arrow{
@@ -119,6 +135,8 @@ html,
     display: flex;
     flex-direction: column;
     gap: 12px ;
+    max-height: 390px;
+    overflow:hidden;
 }
 
 .product-detail-page-image{
@@ -175,6 +193,7 @@ html,
 
 #product-limit p{
     margin-bottom: 0px;
+    font-size: 0.875rem;
 }
 
 #product-limit{
@@ -357,6 +376,20 @@ html,
 
 .product-detail-content-item svg{
     margin-bottom: 1rem;
+}
+
+.product-detail-content-item:nth-child(1) svg{
+    opacity: 60%;
+}
+
+.product-detail-content-item:nth-child(2) svg{
+    opacity: 60%;
+}
+.product-detail-content-item:nth-child(3) svg{
+    opacity: 60%;
+}
+.product-detail-content-item:nth-child(4) svg{
+    opacity: 60%;
 }
 
 .product-detail-content-item:nth-child(3) svg{
