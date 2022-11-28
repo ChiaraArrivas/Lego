@@ -25,7 +25,7 @@
   left: 210px;
 }
 .container .d-inline-flex .customFirst .card-body .text-body {
-  color: rgb(250, 246, 246);
+  font-weight: 500;
   text-decoration: none;
 }
 .container .d-inline-flex .customFirst .card-body .text-body .bi {
