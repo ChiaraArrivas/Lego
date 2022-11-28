@@ -1,3 +1,38 @@
-
+.container {
+  margin: 0;
+}
+.container .d-inline-flex {
+  margin-right: 10px;
+}
+.container .d-inline-flex .col {
+  width: 308px;
+  margin-right: 10px;
+}
+.container .d-inline-flex .customFirst {
+  width: 40%;
+  padding: 0;
+  border: none;
+}
+.container .d-inline-flex .customFirst .card-img-top {
+  border-radius: 0;
+  width: 308px;
+  height: 213;
+}
+.container .d-inline-flex .customFirst .logo {
+  height: 30px;
+  position: absolute;
+  top: 155px;
+  left: 210px;
+}
+.container .d-inline-flex .customFirst .card-body .text-body {
+  color: rgb(250, 246, 246);
+  text-decoration: none;
+}
+.container .d-inline-flex .customFirst .card-body .text-body .bi {
+  color: rgb(0, 0, 0);
+}
+.container .d-inline-flex .customFirst .card-body .text-body:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=style.css.map */

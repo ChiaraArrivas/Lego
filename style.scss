@@ -1,0 +1,53 @@
+.container {
+    margin: 0;
+
+    .d-inline-flex {
+        margin-right: 10px;
+
+        .col {
+            width: 308px;
+            margin-right: 10px;
+        }
+
+        .customFirst {
+            width: 40%;
+            padding: 0;
+            border: none;
+
+            .card-img-top {
+                border-radius: 0;
+                width: 308px;
+                height: 213;
+            }
+
+            .logo {
+                height: 30px;
+                position: absolute;
+                top: 155px;
+                left: 210px;
+            }
+
+            .card-body {
+
+
+                .card-text {}
+
+                .text-body {
+
+                    color: rgb(250, 246, 246);
+                    text-decoration: none;
+
+                    .bi {
+                        color: rgb(0, 0, 0);
+                    }
+                }
+
+                .text-body:hover {
+                    text-decoration: underline;
+                }
+
+
+            }
+        }
+    }
+}
